@@ -1,3 +1,5 @@
+// Katsama Amornnimit
+
 let language = 'English'
 let languageCode = 'en'
 let jsonData
@@ -10,6 +12,10 @@ const setLanguage = (code) => {
         language = 'Russian'
     } else if (code === 'es') {
         language = 'Spanish'
+    } else if (code === 'fr') {
+          language = 'Franch'
+    } else if (code === 'th') {
+          language = 'Thai'
     } else {
         language = 'English'
     }
@@ -66,22 +72,40 @@ const getData = () => {
             // 1. Describe what you think this code is doing.
 
             // 2. output the text of the third tweet:
+            status = json.statuses[2]
+            div = document.createElement("div")
+            div.className = "tweet"
+            textNode = document.createTextNode(status.text)
+            div.appendChild(textNode)
+            document.getElementById("results").appendChild(div)
 
             // 3. output the text of the fourth tweet:
+            status = json.statuses[3]
+            div = document.createElement("div")
+            div.className = "tweet"
+            textNode = document.createTextNode(status.text)
+            div.appendChild(textNode)
+            document.getElementById("results").appendChild(div)
 
             // 4. output the text of the fifth tweet:
+            status = json.statuses[4]
+            div = document.createElement("div")
+            div.className = "tweet"
+            textNode = document.createTextNode(status.text)
+            div.appendChild(textNode)
+            document.getElementById("results").appendChild(div)
 
             // 5. comment the code above, starting from after the clearData,
             //    and ending right before this comment. Then, un-comment the
             //    code below:
 
-            /*json.statuses.forEach(function (status) {
-                div = document.createElement("div")
-                div.className = "tweet"
-                textNode = document.createTextNode(status.text)
-                div.appendChild(textNode)
-                document.getElementById("results").appendChild(div)
-            })*/
+            // json.statuses.forEach(function (status) {
+            //     div = document.createElement("div")
+            //     div.className = "tweet"
+            //     textNode = document.createTextNode(status.text)
+            //     div.appendChild(textNode)
+            //     document.getElementById("results").appendChild(div)
+            // })
 
         })
 };

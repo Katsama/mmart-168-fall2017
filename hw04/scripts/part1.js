@@ -1,3 +1,5 @@
+// Katsama Amornnimit
+
 let language
 let languageCode
 
@@ -8,6 +10,10 @@ const setLanguage = (code) => {
         language = 'Russian'
     } else if (code === 'es') {
         language = 'Spanish'
+    } else if (code === 'fr') {
+        language = 'Franch'
+    } else if (code === 'th') {
+        language = 'Thai'
     } else {
         language = 'English'
     }
